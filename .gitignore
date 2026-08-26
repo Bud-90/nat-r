@@ -1,0 +1,18 @@
+# WordPress core (on ne versionne pas le core, seulement thème/plugins custom)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+!wp-config-sample.php
+
+# Contenu et uploads (jamais versionnés)
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+
+# Config et secrets
+wp-config.php
+.env
+
+# Divers
+.DS_Store
+*.log
