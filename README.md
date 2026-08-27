@@ -1,7 +1,7 @@
-# nath-r
+# nat-r
 
 Site vitrine statique pour une organisatrice d'atelier de céramique.
-Nom de domaine visé : nath-r.be (à enregistrer). Sous-domaine de test en attendant : nath-r.dmebud.eu
+Nom de domaine visé : nat-r.be (à enregistrer). Sous-domaine de test en attendant : nat-r.dmebud.eu
 
 ## Développement local
 Fichiers HTML/CSS/JS statiques, édités avec VS Code.
