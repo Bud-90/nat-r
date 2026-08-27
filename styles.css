@@ -132,25 +132,14 @@ section p{color:var(--ink-soft);max-width:60ch;}
   margin-top:24px;
 }
 .gallery-item{
+  width:100%;
   aspect-ratio:4/3;
+  object-fit:cover;
   border-radius:6px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--paper);
-  font-family:'Fraunces',serif;
-  font-style:italic;
-  font-size:0.95rem;
-  text-align:center;
-  padding:12px;
   border:1px solid var(--line);
+  background:var(--paper);
+  display:block;
 }
-.gallery-item:nth-child(6n+1){background:linear-gradient(135deg,var(--clay),var(--clay-dark));}
-.gallery-item:nth-child(6n+2){background:linear-gradient(135deg,var(--sage),#5f6b52);}
-.gallery-item:nth-child(6n+3){background:linear-gradient(135deg,var(--ink-soft),var(--ink));}
-.gallery-item:nth-child(6n+4){background:linear-gradient(135deg,var(--clay-dark),var(--ink));}
-.gallery-item:nth-child(6n+5){background:linear-gradient(135deg,#a97a52,var(--clay-dark));}
-.gallery-item:nth-child(6n+6){background:linear-gradient(135deg,var(--sage),var(--clay-dark));}
 
 /* Contact form */
 form.contact-form{
