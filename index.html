@@ -1,10 +1,331 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Nat-R</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nat'R — Atelier de céramique</title>
+<meta name="description" content="Nat'R, atelier de céramique — initiation au tour de modelage tous les mardis soirs de 18h30 à 21h30. Contact et inscriptions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clay:#bd6039;
+    --clay-dark:#9c4c2c;
+    --cream:#f7efe2;
+    --paper:#fbf6ee;
+    --ink:#372a20;
+    --ink-soft:#5c4d3f;
+    --sage:#7c8a6a;
+    --line:#e4d5bf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Jost',sans-serif;
+    font-weight:400;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,.brand{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    color:var(--ink);
+  }
+  a{color:var(--clay-dark);}
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px;}
+
+  header{
+    padding:28px 0;
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{font-size:1.3rem;letter-spacing:0.02em;text-decoration:none;color:var(--ink);}
+  nav a{
+    margin-left:28px;
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-size:0.95rem;
+    letter-spacing:0.02em;
+    border-bottom:1px solid transparent;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  nav a:hover{color:var(--clay-dark);border-color:var(--clay-dark);}
+
+  .hero{
+    padding:64px 0 56px;
+    text-align:center;
+  }
+  .hero .motif{margin:0 auto 12px;width:88px;height:88px;}
+  .hero h1{
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    font-style:italic;
+    font-weight:600;
+    letter-spacing:0.01em;
+  }
+  .hero p.tagline{
+    margin-top:14px;
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    font-weight:300;
+  }
+
+  section{padding:52px 0;border-top:1px solid var(--line);}
+  section h2{
+    font-size:1.7rem;
+    font-style:italic;
+    margin-bottom:18px;
+  }
+  section p{
+    color:var(--ink-soft);
+    max-width:60ch;
+  }
+
+  .course-card{
+    margin-top:20px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:26px 28px;
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+  }
+  .course-card .day{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--clay-dark);
+    white-space:nowrap;
+  }
+  .course-card .details p{margin:0;}
+  .course-card .details .time{
+    color:var(--ink);
+    font-weight:500;
+    margin-bottom:6px;
+  }
+
+  .contact-grid{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .contact-item{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:18px 22px;
+    flex:1 1 220px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .contact-item:hover{border-color:var(--clay);transform:translateY(-2px);}
+  .contact-item .label{
+    display:block;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--sage);
+    margin-bottom:6px;
+  }
+  .contact-item .value{
+    font-family:'Fraunces',serif;
+    font-size:1.05rem;
+    color:var(--ink);
+  }
+
+  footer{
+    padding:36px 0 48px;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:0.85rem;
+  }
+
+  @media (max-width:560px){
+    nav a{margin-left:16px;font-size:0.85rem;}
+    .course-card{flex-direction:column;gap:8px;}
+  }
+
+  form.contact-form{
+    margin-top:28px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:26px 28px;
+    max-width:520px;
+  }
+  form.contact-form .field{
+    margin-bottom:16px;
+  }
+  form.contact-form label{
+    display:block;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--sage);
+    margin-bottom:6px;
+  }
+  form.contact-form input,
+  form.contact-form textarea{
+    width:100%;
+    font-family:'Jost',sans-serif;
+    font-size:1rem;
+    color:var(--ink);
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:10px 12px;
+  }
+  form.contact-form input:focus,
+  form.contact-form textarea:focus{
+    outline:none;
+    border-color:var(--clay);
+  }
+  form.contact-form textarea{
+    min-height:120px;
+    resize:vertical;
+  }
+  form.contact-form button{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1rem;
+    color:var(--paper);
+    background:var(--clay-dark);
+    border:none;
+    border-radius:4px;
+    padding:11px 26px;
+    cursor:pointer;
+    transition:background .2s ease;
+  }
+  form.contact-form button:hover{background:var(--clay);}
+  form.contact-form button:disabled{opacity:0.6;cursor:default;}
+  .form-note{
+    margin-top:12px;
+    font-size:0.9rem;
+  }
+  .form-note.success{color:var(--sage);}
+  .form-note.error{color:var(--clay-dark);}
+  .or-divider{
+    margin:28px 0 8px;
+    color:var(--ink-soft);
+    font-size:0.9rem;
+    font-style:italic;
+  }
+</style>
 </head>
 <body>
-  <h1>Nat-R — bientôt en ligne</h1>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="brand">Nat'R</a>
+    <nav>
+      <a href="#cours">Cours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <svg class="motif" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="50" cy="86" rx="26" ry="5" fill="#e4d5bf"/>
+    <path d="M35 30 C33 45, 30 58, 34 74 C36 82, 64 82, 66 74 C70 58, 67 45, 65 30 Z" fill="#bd6039" opacity="0.92"/>
+    <path d="M35 30 C33 45, 30 58, 34 74 C36 82, 64 82, 66 74 C70 58, 67 45, 65 30 Z" stroke="#9c4c2c" stroke-width="1.2"/>
+    <ellipse cx="50" cy="30" rx="15" ry="5" fill="#9c4c2c"/>
+    <ellipse cx="50" cy="29" rx="12.5" ry="3.6" fill="#f7efe2"/>
+  </svg>
+  <h1>Atelier de céramique</h1>
+  <p class="tagline">Façonner la terre, à la main et au tour — dans un atelier ouvert à toutes et tous.</p>
+</div>
+
+<section id="cours">
+  <div class="wrap">
+    <h2>Les cours</h2>
+    <p>Une initiation au tour de modelage, pour découvrir le geste du potier et repartir avec ses premières pièces façonnées de ses mains.</p>
+    <div class="course-card">
+      <div class="day">Le mardi soir</div>
+      <div class="details">
+        <p class="time">18h30 – 21h30</p>
+        <p>Initiation au tour de modelage</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>Pour toute question ou inscription, écrivez ou appelez directement.</p>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:nathalieremy27@gmail.com">
+        <span class="label">Email</span>
+        <span class="value">nathalieremy27@gmail.com</span>
+      </a>
+      <a class="contact-item" href="tel:+32473603734">
+        <span class="label">Téléphone</span>
+        <span class="value">+32 473 60 37 34</span>
+      </a>
+    </div>
+
+    <p class="or-divider">— ou passez directement par ce formulaire —</p>
+    <form class="contact-form" id="contactForm">
+      <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS_ICI">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="field">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Votre email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Envoyer</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  Nat'R — Atelier de céramique
+</footer>
+
+
+<script>
+  const form = document.getElementById('contactForm');
+  const note = document.getElementById('formNote');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button');
+    btn.disabled = true;
+    note.textContent = 'Envoi en cours...';
+    note.className = 'form-note';
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      });
+      const data = await res.json();
+      if (data.success) {
+        note.textContent = 'Message envoyé, merci ! Réponse au plus vite.';
+        note.className = 'form-note success';
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Erreur inconnue');
+      }
+    } catch (err) {
+      note.textContent = "Une erreur est survenue, réessayez ou écrivez directement par email.";
+      note.className = 'form-note error';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
 </body>
 </html>
