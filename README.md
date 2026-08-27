@@ -1,12 +1,10 @@
-# atelier-ceramique
+# nath-r
 
-Site WordPress pour l'organisatrice d'atelier de céramique (stages, travaux, inscriptions).
-Nom de domaine à définir.
+Site vitrine statique pour une organisatrice d'atelier de céramique.
+Nom de domaine visé : nath-r.be (à enregistrer). Sous-domaine de test en attendant : nath-r.dmebud.eu
 
 ## Développement local
-Environnement WordPress local à mettre en place (DDEV).
-Seuls le thème et les plugins custom sont versionnés ici — jamais wp-content/uploads ni la base de données.
+Fichiers HTML/CSS/JS statiques, édités avec VS Code.
 
 ## Déploiement
-Push sur `main` → GitHub Actions rsync du thème/plugins vers le VPS OVH.
-Le contenu (stages, articles, inscriptions) est géré directement via wp-admin en production.
+Push sur `main` → GitHub Actions build + rsync vers le VPS OVH.
