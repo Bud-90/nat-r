@@ -29,19 +29,11 @@ a{color:var(--clay-dark);}
 header{padding:28px 0;}
 header .wrap{display:flex;align-items:center;justify-content:space-between;}
 .brand{
-  display:flex;
-  align-items:center;
-  gap:9px;
+  display:block;
   text-decoration:none;
-  color:var(--ink);
+  line-height:0;
 }
-.brand svg{width:34px;height:34px;flex-shrink:0;}
-.brand .brand-word{
-  font-family:'Marck Script',cursive;
-  font-size:1.75rem;
-  line-height:1;
-  padding-top:4px;
-}
+.brand svg{height:60px;width:auto;display:block;}
 nav a{
   margin-left:28px;
   text-decoration:none;
