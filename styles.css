@@ -33,7 +33,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;}
   text-decoration:none;
   line-height:0;
 }
-.brand svg{height:60px;width:auto;display:block;}
+.brand svg{height:92px;width:auto;display:block;}
 nav a{
   margin-left:28px;
   text-decoration:none;
