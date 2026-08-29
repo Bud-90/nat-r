@@ -2,7 +2,7 @@ name: Deploy to VPS
 
 on:
   push:
-    branches: [draft]
+    branches: [main]
 
 jobs:
   deploy:
@@ -14,7 +14,7 @@ jobs:
       - name: Setup SSH agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
 
       - name: Add known host
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
@@ -25,4 +25,4 @@ jobs:
             --exclude '.git' \
             --exclude '.github' \
             --exclude '.gitignore' \
-            ./ deployer_nat-r@${{ secrets.SSH_HOST }}:htdocs/nat-r.dmebud.eu/
+            ./ deployer_nat-r_prod@${{ secrets.SSH_HOST }}:htdocs/nat-r.be/
