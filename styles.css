@@ -105,6 +105,7 @@ section p{color:var(--ink-soft);max-width:60ch;}
   border:1px solid var(--line);
   border-radius:6px;
   padding:26px 28px;
+  text-align:center;
 }
 .formula-card h3{
   font-family:'Fraunces',serif;
@@ -114,10 +115,21 @@ section p{color:var(--ink-soft);max-width:60ch;}
   color:var(--clay-dark);
   margin-bottom:10px;
 }
-.formula-card p{color:var(--ink-soft);margin-bottom:8px;max-width:60ch;}
+.formula-card p{color:var(--ink-soft);margin:0 auto 8px;max-width:60ch;}
 .formula-card p:last-child{margin-bottom:0;}
 .formula-card .price{color:var(--ink);font-weight:600;}
 .formula-card .note{font-size:0.88rem;font-style:italic;}
+.time-badge{
+  display:inline-block;
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:7px 18px;
+  margin:6px 0 12px;
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--clay-dark);
+}
 
 .contact-grid{margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;}
 .contact-item{
