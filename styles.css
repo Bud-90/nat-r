@@ -168,7 +168,10 @@ section p{color:var(--ink-soft);max-width:60ch;}
   max-width:60ch;
 }
 
-.contact-grid{margin-top:20px;display:flex;flex-wrap:wrap;gap:16px;}
+.contact-intro{text-align:center;}
+.contact-intro > p{margin-left:auto;margin-right:auto;}
+.contact-grid{margin-top:20px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;}
+.contact-item{text-align:left;}
 .contact-item{
   background:var(--paper);
   border:1px solid var(--line);
