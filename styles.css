@@ -129,6 +129,18 @@ section p{color:var(--ink-soft);max-width:60ch;}
 }
 .cta-inline:hover{background:var(--clay);}
 
+#bienvenue{text-align:center;}
+#bienvenue p{margin-left:auto;margin-right:auto;}
+.cta-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px;
+  margin-top:24px;
+}
+.cta-row .cta-inline{margin-top:0;}
+
+
 /* Gallery */
 .gallery-grid{
   display:grid;
