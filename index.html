@@ -3,19 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nat'R — Atelier de céramique</title>
-<meta name="description" content="Nat'R, atelier de céramique — initiation au tour de modelage tous les mardis soirs de 18h30 à 21h30. Contact et inscriptions.">
+<title>Nat'R — Bientôt en ligne</title>
+<meta name="description" content="Le site de l'atelier de céramique Nat'R arrive bientôt.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clay:#bd6039; --clay-dark:#9c4c2c; --cream:#f7efe2; --paper:#fbf6ee;
+    --ink:#372a20; --ink-soft:#5c4d3f;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+    font-family:'Jost', sans-serif;background:var(--cream);color:var(--ink);
+    text-align:center;padding:24px;
+  }
+  .card{max-width:420px;}
+  .brand svg{height:130px;width:auto;display:block;margin:0 auto 28px;}
+  h1{font-size:1.6rem;margin:0 0 12px;color:var(--ink);}
+  p{color:var(--ink-soft);font-size:1rem;line-height:1.6;margin:0 0 22px;}
+  .phone{
+    display:inline-block;text-decoration:none;font-weight:600;color:#fff;
+    background:var(--clay);padding:12px 26px;border-radius:999px;font-size:.95rem;
+  }
+  .phone:hover{background:var(--clay-dark);}
+</style>
 </head>
 <body>
-
-<header>
-  <div class="wrap">
-    <a href="index.html" class="brand">
+  <div class="card">
+    <div class="brand">
       <svg viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nat'R">
         <circle cx="90" cy="60" r="46" fill="none" stroke="#bd6039" stroke-width="2.5"/>
         <circle cx="93" cy="60" r="35" fill="none" stroke="#bd6039" stroke-width="2"/>
@@ -23,45 +41,10 @@
         <circle cx="91" cy="60" r="12" fill="none" stroke="#e07b3d" stroke-width="4"/>
         <text x="90" y="128" text-anchor="middle" font-family="'Marck Script', cursive" font-size="34" fill="#372a20">Nat'R</text>
       </svg>
-    </a>
-    <nav>
-      <a href="index.html" class="current">Accueil</a>
-      <a href="medias.html">Médias</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<div class="hero wrap">
-  <svg class="motif" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="50" cy="86" rx="26" ry="5" fill="#e4d5bf"/>
-    <path d="M35 30 C33 45, 30 58, 34 74 C36 82, 64 82, 66 74 C70 58, 67 45, 65 30 Z" fill="#bd6039" opacity="0.92"/>
-    <path d="M35 30 C33 45, 30 58, 34 74 C36 82, 64 82, 66 74 C70 58, 67 45, 65 30 Z" stroke="#9c4c2c" stroke-width="1.2"/>
-    <ellipse cx="50" cy="30" rx="15" ry="5" fill="#9c4c2c"/>
-    <ellipse cx="50" cy="29" rx="12.5" ry="3.6" fill="#f7efe2"/>
-  </svg>
-  <h1>Atelier de céramique</h1>
-  <p class="tagline">Façonner la terre, à la main et au tour — dans un atelier ouvert à toutes et tous.</p>
-</div>
-
-<section id="cours">
-  <div class="wrap">
-    <h2>Les cours</h2>
-    <p>Une initiation au tour de modelage, pour découvrir le geste du potier et repartir avec ses premières pièces façonnées de ses mains.</p>
-    <div class="course-card">
-      <div class="day">Le mardi soir</div>
-      <div class="details">
-        <p class="time">18h30 – 21h30</p>
-        <p>Initiation au tour de modelage</p>
-      </div>
     </div>
-    <a class="cta-inline" href="contact.html">Nous rejoindre →</a>
+    <h1>Bientôt en ligne</h1>
+    <p>Le site de l'atelier de céramique Nat'R est en cours de préparation. En attendant, n'hésitez pas à nous appeler.</p>
+    <a class="phone" href="tel:+32473603734">+32 473 60 37 34</a>
   </div>
-</section>
-
-<footer>
-  Nat'R : +32 473 60 37 34
-</footer>
-
 </body>
 </html>
