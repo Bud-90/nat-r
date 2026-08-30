@@ -242,7 +242,7 @@ section p{color:var(--ink-soft);max-width:60ch;}
 
 /* Contact form */
 form.contact-form{
-  margin-top:28px;
+  margin:28px auto 0;
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:6px;
