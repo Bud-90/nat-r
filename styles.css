@@ -93,6 +93,8 @@ section p{color:var(--ink-soft);max-width:60ch;}
 .course-card .details p{margin:0;}
 .course-card .details .time{color:var(--ink);font-weight:500;margin-bottom:6px;}
 
+#cours{text-align:center;}
+
 .formules-intro{
   text-align:center;
   max-width:60ch;
