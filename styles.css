@@ -133,26 +133,35 @@ section p{color:var(--ink-soft);max-width:60ch;}
   color:var(--clay-dark);
 }
 
+#infos{text-align:center;}
 .info-list{
   list-style:none;
   padding:0;
-  margin:16px 0 0;
+  margin:20px auto 0;
+  max-width:60ch;
+  width:fit-content;
 }
 .info-list li{
-  position:relative;
-  padding-left:22px;
-  margin-bottom:10px;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  text-align:left;
   color:var(--ink-soft);
-  max-width:60ch;
+  margin-bottom:14px;
 }
+.info-list li:last-child{margin-bottom:0;}
 .info-list li::before{
-  content:"•";
-  position:absolute;
-  left:0;
-  color:var(--clay);
+  content:"";
+  flex:0 0 auto;
+  width:9px;
+  height:9px;
+  margin-top:7px;
+  border-radius:50%;
+  background:var(--clay);
+  box-shadow:0 0 0 3px var(--cream), 0 0 0 4px var(--line);
 }
 .cuisson-note{
-  margin-top:20px;
+  margin:20px auto 0;
   padding-top:20px;
   border-top:1px solid var(--line);
   color:var(--ink-soft);
