@@ -301,5 +301,6 @@ footer{padding:36px 0 48px;text-align:center;color:var(--ink-soft);font-size:0.8
 
 /* Fond photo — page d'accueil uniquement */
 body.page-home{
-  background-image:linear-gradient(150deg, var(--paper) 0%, var(--cream) 35%, var(--line) 65%, #d9b78f 100%);
+  min-height:100vh;
+  background-image:linear-gradient(150deg, var(--cream) 0%, #e7c093 30%, #d69a68 60%, var(--clay) 85%, var(--clay-dark) 100%);
 }
