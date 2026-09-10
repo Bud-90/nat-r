@@ -11,7 +11,8 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{
-  background:var(--cream);
+  min-height:100vh;
+  background-image:linear-gradient(150deg, var(--cream) 0%, #f0dab9 30%, #e8c39a 60%, #dfa877 85%, #d6976a 100%);
   color:var(--ink);
   font-family:'Jost',sans-serif;
   font-weight:400;
@@ -297,10 +298,4 @@ footer{padding:36px 0 48px;text-align:center;color:var(--ink-soft);font-size:0.8
 @media (max-width:560px){
   nav a{margin-left:16px;font-size:0.85rem;}
   .course-card{flex-direction:column;gap:8px;}
-}
-
-/* Fond photo — page d'accueil uniquement */
-body.page-home{
-  min-height:100vh;
-  background-image:linear-gradient(150deg, var(--cream) 0%, #f0dab9 30%, #e8c39a 60%, #dfa877 85%, #d6976a 100%);
 }
