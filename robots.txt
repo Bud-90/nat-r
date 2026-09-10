@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nat-r.be/sitemap.xml
