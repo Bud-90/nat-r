@@ -303,6 +303,6 @@ footer{padding:36px 0 48px;text-align:center;color:var(--ink-soft);font-size:0.8
 body.page-home{
   background-image:linear-gradient(rgba(251,246,238,0.90), rgba(251,246,238,0.94)), url('images/atelier-08.jpg');
   background-size:cover;
-  background-position:center top;
+  background-position:center bottom;
   background-repeat:no-repeat;
 }
